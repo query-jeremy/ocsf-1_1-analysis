@@ -3,7 +3,7 @@
 ## Assumptions:
 
  - We'll change how extensions are handled so that the `macos`, `linux`, and `win` extensions work.
- - We'll use the (qdm-curator)[https://github.com/query-ai/qdm-curator/tree/initial] process to preserve record types and attributes to minimize the change.
+ - We'll use the [qdm-curator](https://github.com/query-ai/qdm-curator/tree/initial) process to preserve record types and attributes to minimize the change.
  - By OCSF v1.1, we mean `ocsf-schema/main@d65578dc77231d34673939327666b4643f6cae9a`. An official tagged release of OCSF v1.1 has not yet been christened.
 
 ## Artifacts
