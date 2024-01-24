@@ -1,0 +1,206 @@
+[input]
+new_repo = "test-schemas/ocsf1"
+old_repo = "test-schemas/qdm"
+
+[process]
+update = [
+    "?.?.description", # The community is better at updating descriptions and captions than Query
+    "*.attributes.?.description", # The community is better at updating descriptions and captions than Query
+    "*.caption", 
+    "*.extension", # This is added by Query and changes based on the order of extensions
+    "*.profile",
+    "*.extends", # All of these changes are probably good...
+    "*.constraints.?", # QDM doesn't enforce constraints
+    "*.attributes.?.requirement", # QDM doesn't enforce OCSF requirements
+
+    # The elements below were in early versions of OCSF/QDM 
+    # but unaddressable by Query's search.
+    "events.access_activity",
+    "events.admin_group_info",
+    "events.application",
+    "events.application_log",
+    "events.audit",
+    "events.base_event",
+    "events.bit_locker",
+    "events.clipboard_content_protection",
+    "events.cloud",
+    "events.cloud_api",
+    "events.cloud_storage",
+    "events.command_activity",
+    "events.compliance",
+    "events.compliance_scan",
+    "events.conclusion",
+    "events.config_state",
+    "events.container_lifecycle",
+    "events.cpu_usage",
+    "events.database",
+    "events.database_lifecycle",
+    "events.dhcp_activity",
+    "events.diagnostic",
+    "events.discovery",
+    "events.discovery_no_result",
+    "events.discovery_result",
+    "events.email_activity",
+    "events.email_content_protection",
+    "events.email_delivery_finding",
+    "events.email_file_activity",
+    "events.email_file_finding",
+    "events.email_finding",
+    "events.email_url_activity",
+    "events.email_url_finding",
+    "events.entity_management_audit",
+    "events.file_content_protection",
+    "events.file_info",
+    "events.file_remediation_result",
+    "events.findings",
+    "events.folder_info",
+    "events.folder_remediation_result",
+    "events.ftp_activity",
+    "events.im_content_protection",
+    "events.incident",
+    "events.incident_associate",
+    "events.incident_close",
+    "events.incident_create",
+    "events.incident_update",
+    "events.information_protection",
+    "events.inventory",
+    "events.inventory_info",
+    "events.job_info",
+    "events.job_remediation_result",
+    "events.kernel_activity",
+    "events.kernel_extension",
+    "events.kernel_object_info",
+    "events.kernel_remediation_result",
+    "events.license",
+    "events.license_count",
+    "events.license_lifecycle",
+    "events.mem_usage",
+    "events.memory_activity",
+    "events.module_activity",
+    "events.module_info",
+    "events.module_remediation_result",
+    "events.network_connection_info",
+    "events.network_policy",
+    "events.network_remediation_result",
+    "events.networks_info",
+    "events.peripheral_activity",
+    "events.peripheral_device_info",
+    "events.policy",
+    "events.policy_audit",
+    "events.policy_change",
+    "events.prefetch_info",
+    "events.print_content_protection",
+    "events.process_info",
+    "events.process_remediation_result",
+    "events.public_key_cert_lifecycle",
+    "events.rdp_activity",
+    "events.registration",
+    "events.registry_key_activity",
+    "events.registry_key_info",
+    "events.registry_key_remediation_result",
+    "events.registry_value_activity",
+    "events.registry_value_info",
+    "events.registry_value_remediation_result",
+    "events.remediation",
+    "events.remediation_no_result",
+    "events.remediation_result",
+    "events.resource_activity",
+    "events.rfb_activity",
+    "events.scan",
+    "events.scheduled_job_activity",
+    "events.service_info",
+    "events.service_remediation_result",
+    "events.session_info",
+    "events.session_remediation_result",
+    "events.smb_activity",
+    "events.smtp_activity",
+    "events.ssh_activity",
+    "events.startup_app_info",
+    "events.startup_app_remediation_result",
+    "events.status",
+    "events.system",
+    "events.throughput",
+    "events.unscannable_file",
+    "events.update",
+    "events.update_available",
+    "events.user_info",
+    "events.virtual_machine_activity",
+    "events.virtualization_activity",
+    "objects._base_threat_intelligence",
+    "objects._dns",
+    "objects.api",
+    "objects.authorization",
+    "objects.cis_benchmark_result",
+    "objects.container",
+    "objects.dce_rpc",
+    "objects.email",
+    "objects.email_auth",
+    "objects.endpoint",
+    "objects.event_source",
+    "objects.frame_buffer",
+    "objects.hassh",
+    "objects.http_cookie",
+    "objects.identity",
+    "objects.idp",
+    "objects.job",
+    "objects.kernel",
+    "objects.kernel_driver",
+    "objects.license_info",
+    "objects.managed_entity",
+    "objects.os_service",
+    "objects.peripheral_device",
+    "objects.pixel_info",
+    "objects.policy",
+    "objects.printer",
+    "objects.public_key_certificate",
+    "objects.registry_key",
+    "objects.registry_value",
+    "objects.request",
+    "objects.response",
+    "objects.rule",
+    "objects.service",
+    "objects.session",
+    "objects.smtp_tls",
+    "objects.startup_app",
+    "objects.vnc_auth",
+]
+
+preserve = [
+    "*.type", # Not so sure about this one...
+    "?.?.attributes.*", # Keep all attributes by default
+    "?.?.attributes.?.enum.*", # Keep all enums by default
+    "*.@deprecated.*", # Don't update @deprecated messages
+    "?.?.?", # Keep elements by default
+
+    # The lines below are specific paths that we want to preserve because they were deleted in OCSF 
+    #  but otherwise match less specific paths in the update list above.
+    "objects.authorization.attributes.decision.requirement",
+    "objects.authorization.attributes.policy.requirement",
+    "objects.http_request.attributes.http_method.requirement",
+    "objects.email.attributes.subject.requirement",
+    "objects.domain_intelligence.attributes.domain_info.description",
+]
+
+ignore = [
+    "?.?.attributes.$include",
+    "?.?.$include",
+    "?.?.profiles",
+    "?.?.extension",
+    "?.?.extends",
+    "?.?.uid", # Query doesn't care about UIDs or categories
+]
+
+# Attempt to resolve conflicting guidance
+resolve_conflicts = true 
+
+# Crash if update/preserve behavior is unspecified or cannot be determined for an element.
+crash_unspecified = true 
+
+# Crash if properties are removed.
+crash_remove = true
+
+[output]
+extension = "deprecated"
+init_extn = true
+init_order = true
+order_file = "ordering.toml"

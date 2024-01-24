@@ -1,0 +1,74 @@
+{
+  "@deprecated": {
+    "message": "Preserved by QDM Curator 2024-01-24",
+    "since": "1.1.0"
+  },
+  "attributes": {
+    "provider": {
+      "caption": "Provider",
+      "description": "Threat intelligence data provider name e.g. AlienVaultOTX",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "reputation": {
+      "caption": "Reputation Scores",
+      "description": "Reputation score as reported by provider",
+      "requirement": "optional",
+      "type": "reputation"
+    },
+    "type_id": {
+      "caption": "Type ID",
+      "default": 0,
+      "description": "Type of entity for which threat info is provided e.g. IP",
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The type is not mapped. See the <code>type</code> attribute, which may contain a data source specific value."
+        },
+        "0": {
+          "caption": "Unknown",
+          "description": "The type is unknown."
+        },
+        "1": {
+          "caption": "IP"
+        },
+        "2": {
+          "caption": "Domain"
+        },
+        "3": {
+          "caption": "Url"
+        },
+        "4": {
+          "caption": "Hash"
+        }
+      },
+      "requirement": "required",
+      "sibling": "type",
+      "type": "integer_t"
+    },
+    "value": {
+      "caption": "Value",
+      "description": "Entity value for which threat info is provided",
+      "requirement": "required",
+      "type": "string_t"
+    }
+  },
+  "caption": "Threat Intelligence",
+  "description": "Insights from threat intelligence platforms",
+  "extends": "object",
+  "extension": "query",
+  "name": "threat_intelligence"
+}

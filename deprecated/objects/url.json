@@ -1,0 +1,40 @@
+{
+  "attributes": {
+    "category_ids": {
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The Domain/URL category is not mapped. See the <code>categories</code> attribute, which may contain a data source specific value."
+        }
+      }
+    },
+    "path": {
+      "type": "path_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "reputation": {
+      "caption": "Reputation Scores",
+      "description": "Contains the original and normalized reputation scores.",
+      "requirement": "optional",
+      "type": "reputation"
+    },
+    "text": {
+      "caption": "URL Text",
+      "description": "The URL. For example: <code>http://www.example.com/download/trouble.exe</code>.",
+      "requirement": "required",
+      "type": "url_t"
+    }
+  }
+}

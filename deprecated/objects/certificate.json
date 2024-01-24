@@ -1,0 +1,35 @@
+{
+  "attributes": {
+    "fingerprint": {
+      "caption": "Fingerprint",
+      "description": "The fingerprint of the certificate.",
+      "requirement": "required",
+      "type": "fingerprint"
+    },
+    "issuer_dn": {
+      "caption": "Issuer Distinguished Name",
+      "description": "The certificate issuer distinguished name.",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "subject_dn": {
+      "caption": "Subject Distinguished Name",
+      "description": "The certificate subject distinguished name.",
+      "requirement": "recommended",
+      "type": "string_t"
+    }
+  }
+}

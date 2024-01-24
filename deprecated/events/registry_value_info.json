@@ -1,0 +1,94 @@
+{
+  "attributes": {
+    "activity_id": {
+      "$include": "enums/defaults.json",
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The event activity is not mapped."
+        }
+      }
+    },
+    "category_uid": {
+      "default": 0,
+      "enum": {
+        "-1": {
+          "caption": "Other"
+        }
+      }
+    },
+    "class_uid": {
+      "default": 0,
+      "enum": {
+        "-1": {
+          "caption": "Other"
+        }
+      }
+    },
+    "command_uid": {
+      "caption": "Command UID",
+      "description": "The unique identifier of the discovery command that pertains to this event.",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "confidence": {
+      "caption": "Confidence",
+      "description": "The confidence of the reported event severity as a percentage: 0%-100%.",
+      "group": "classification",
+      "requirement": "optional",
+      "type": "integer_t"
+    },
+    "count": {
+      "default": 1
+    },
+    "data": {
+      "caption": "Data",
+      "description": "Additional data that is associated with the event.",
+      "requirement": "optional",
+      "type": "json_t"
+    },
+    "raw_data": {
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique idenifier for the event",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "reg_value": {
+      "type": "registry_value"
+    },
+    "scan_uid": {
+      "caption": "Scan UID",
+      "description": "The unique identifier of the discovery scan request that pertains to this event.",
+      "group": "primary",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "severity_id": {
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The event severity is not mapped. See the <code>severity</code> attribute, which contains a data source specific value."
+        },
+        "0": {
+          "description": "The event severity is not known."
+        }
+      }
+    },
+    "status_id": {
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The event status is not mapped. See the <code>status</code> attribute, which contains a data source specific value."
+        }
+      }
+    },
+    "type_uid": {
+      "type": "integer_t"
+    }
+  }
+}

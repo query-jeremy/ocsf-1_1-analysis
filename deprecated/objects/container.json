@@ -1,0 +1,29 @@
+{
+  "attributes": {
+    "exposed_port": {
+      "caption": "Port",
+      "description": "The port exposed by container to allow access of run application remotely.",
+      "requirement": "optional",
+      "type": "port_t"
+    },
+    "fingerprint": {
+      "caption": "Fingerprint",
+      "description": "The SHA256 hash of the container.",
+      "requirement": "recommemded",
+      "type": "fingerprint"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    }
+  }
+}

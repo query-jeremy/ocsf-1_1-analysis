@@ -1,0 +1,33 @@
+{
+  "attributes": {
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "related_findings": {
+      "caption": "Related Findings",
+      "description": "Describes findings related to a finding as identified by the security product.",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "related_findings"
+    },
+    "remediation": {
+      "caption": "Remediation"
+    },
+    "src_url": {
+      "type": "string_t"
+    },
+    "supporting_data": {
+      "is_array": true
+    }
+  }
+}

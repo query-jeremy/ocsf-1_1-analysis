@@ -1,0 +1,35 @@
+{
+  "attributes": {
+    "bytes": {
+      "default": 0
+    },
+    "bytes_in": {
+      "default": 0
+    },
+    "bytes_out": {
+      "default": 0
+    },
+    "packets": {
+      "default": 0
+    },
+    "packets_in": {
+      "default": 0
+    },
+    "packets_out": {
+      "default": 0
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    }
+  }
+}

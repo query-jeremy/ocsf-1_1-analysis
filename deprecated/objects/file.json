@@ -1,0 +1,62 @@
+{
+  "attributes": {
+    "accessor": {
+      "type": "string_t"
+    },
+    "confidentiality_id": {
+      "enum": {
+        "-1": {
+          "caption": "Other"
+        }
+      }
+    },
+    "creator": {
+      "type": "string_t"
+    },
+    "fingerprints": {
+      "caption": "Fingerprints",
+      "description": "An array of digital fingerprint objects.",
+      "is_array": true,
+      "requirement": "recommended",
+      "type": "fingerprint"
+    },
+    "modifier": {
+      "type": "string_t"
+    },
+    "name": {
+      "name": "file_name_t",
+      "type": "string_t"
+    },
+    "owner": {
+      "type": "string_t"
+    },
+    "parent_folder": {
+      "type": "path_t"
+    },
+    "path": {
+      "type": "path_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "type_id": {
+      "default": 0,
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The type is not mapped. See the <code>type</code> attribute, which may contain a data source specific value."
+        }
+      }
+    }
+  }
+}

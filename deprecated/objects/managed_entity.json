@@ -1,0 +1,23 @@
+{
+  "attributes": {
+    "name": {
+      "notes": "For example <i>Browser Isolation Policy."
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "type": {
+      "notes": "For example: <i>policy</i>, <i>user</i>, <i>organizational unit</i>, <i>device</i>."
+    }
+  }
+}

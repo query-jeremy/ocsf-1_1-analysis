@@ -1,0 +1,24 @@
+{
+  "attributes": {
+    "network_interfaces": {
+      "caption": "Network Interfaces",
+      "description": "The list of DCE/RPC interfaces",
+      "is_array": true,
+      "requirement": "required",
+      "type": "network_interface"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    }
+  }
+}

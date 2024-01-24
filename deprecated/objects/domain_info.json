@@ -1,0 +1,55 @@
+{
+  "@deprecated": {
+    "message": "Preserved by QDM Curator 2024-01-24",
+    "since": "1.1.0"
+  },
+  "attributes": {
+    "created_time": {
+      "caption": "Created Time",
+      "description": "The time when the domain was registered/created.",
+      "requirement": "recommended",
+      "type": "timestamp_t"
+    },
+    "domain": {
+      "caption": "Domain",
+      "description": "The domain name.",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "expiration_time": {
+      "caption": "Expiration Time",
+      "description": "The domain expiration time.",
+      "requirement": "recommended",
+      "type": "timestamp_t"
+    },
+    "modified_time": {
+      "caption": "Modified Time",
+      "description": "The time when the domain was last modified.",
+      "requirement": "recommended",
+      "type": "timestamp_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "registrar": {
+      "caption": "Domain Registrar",
+      "description": "The domain registrar.",
+      "requirement": "recommended",
+      "type": "string_t"
+    }
+  },
+  "caption": "Domain Information",
+  "description": "The registration information pertaining to a domain.",
+  "extends": "object",
+  "name": "domain_info"
+}

@@ -1,0 +1,92 @@
+{
+  "@deprecated": {
+    "message": "Preserved by QDM Curator 2024-01-24",
+    "since": "1.1.0"
+  },
+  "attributes": {
+    "account_uid": {
+      "caption": "Account UID",
+      "description": "The unique identifier of the resource owning account(e.g. AWS Account ID).",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "cloud_partition": {
+      "caption": "Cloud Partition",
+      "description": "The canonical cloud partition name to which the region is assigned (e.g. AWS Partitions: aws, aws-cn, aws-us-gov).",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "criticality": {
+      "caption": "Criticality",
+      "description": "The criticality of the resource.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "details": {
+      "caption": "Details",
+      "description": "The details pertaining to the resource.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "group_name": {
+      "caption": "Group Name",
+      "description": "The name of the group that the resource belongs to.",
+      "requirement": "recommended",
+      "type": "string_t"
+    },
+    "labels": {
+      "caption": "Labels",
+      "description": "The list of labels attached to an event, object, or attribute.",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "name": {
+      "caption": "Name",
+      "description": "The name of the resource.",
+      "requirement": "recommended",
+      "type": "string_t"
+    },
+    "owner": {
+      "caption": "Owner",
+      "description": "The identity of the service or user account that owns the resource",
+      "requirement": "recommended",
+      "type": "string_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "region": {
+      "caption": "Region",
+      "description": "The region of the resource.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "type": {
+      "caption": "Type",
+      "description": "The type of the resource.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "uid": {
+      "caption": "Unique ID",
+      "description": "The unique identifier of the resource.",
+      "requirement": "recommended",
+      "type": "string_t"
+    }
+  },
+  "caption": "Resource",
+  "description": "The resource object describes a managed resource.",
+  "extends": "object",
+  "name": "resource"
+}

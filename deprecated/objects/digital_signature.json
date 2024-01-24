@@ -1,0 +1,42 @@
+{
+  "attributes": {
+    "company_name": {
+      "caption": "Company Name",
+      "description": "The name of the company that published the file. For example: <code>Microsoft Corporation</code>.",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "fingerprints": {
+      "caption": "Fingerprints",
+      "description": "An array of digital fingerprint objects.",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "fingerprint"
+    },
+    "issuer_name": {
+      "caption": "Issuer Name",
+      "description": "The certificate issuer name.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "serial_number": {
+      "caption": "Serial Number",
+      "description": "The serial number of the digital signature.",
+      "requirement": "optional",
+      "type": "string_t"
+    }
+  }
+}

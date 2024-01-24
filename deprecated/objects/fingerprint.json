@@ -1,0 +1,27 @@
+{
+  "attributes": {
+    "algorithm_id": {
+      "enum": {
+        "-1": {
+          "caption": "Other"
+        }
+      }
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "value": {
+      "type": "string_t"
+    }
+  }
+}

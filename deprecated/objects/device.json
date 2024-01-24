@@ -1,0 +1,42 @@
+{
+  "attributes": {
+    "location": {
+      "caption": "Detailed Geo Location"
+    },
+    "org_unit": {
+      "caption": "Org Unit",
+      "description": "The name of the organization to which the user belongs.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "reputation": {
+      "caption": "Reputation Scores",
+      "description": "Contains the original and normalized reputation scores.",
+      "requirement": "optional",
+      "type": "reputation"
+    },
+    "type_id": {
+      "default": 0,
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The type is not mapped. See the <code>type</code> attribute, which may contain a data source specific value."
+        }
+      }
+    }
+  },
+  "observable": 0
+}

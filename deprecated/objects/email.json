@@ -1,0 +1,66 @@
+{
+  "attributes": {
+    "direction": {
+      "caption": "Direction",
+      "description": "The direction of the email, as defined by the <code>direction_id</code> value.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "direction_id": {
+      "caption": "Direction ID",
+      "description": "The direction of the email relative to the scanning host or organization.</p>Email scanned at an internet gateway might be characterized as inbound to the organization from the Internet, outbound from the organization to the Internet, or internal within the organization. Email scanned at a workstation might be characterized as inbound to, or outbound from the workstation.",
+      "enum": {
+        "-1": {
+          "caption": "Other"
+        },
+        "0": {
+          "caption": "Unknown",
+          "description": "The email direction is unknown."
+        },
+        "1": {
+          "caption": "Inbound",
+          "description": "Email Inbound, from the Internet or outside network destined for an entity inside network."
+        },
+        "2": {
+          "caption": "Outbound",
+          "description": "Email Outbound, from inside the network destined for an entity outside network."
+        },
+        "3": {
+          "caption": "Internal",
+          "description": "Email Internal, from inside the network destined for an entity inside network."
+        }
+      },
+      "requirement": "required",
+      "sibling": "direction",
+      "type": "integer_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "recipient_users": {
+      "requirement": "optional"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "sender_users": {
+      "requirement": "optional"
+    },
+    "smtp_hello": {
+      "caption": "SMTP Hello",
+      "description": "The value of the SMTP HELO or EHLO command.",
+      "requirement": "recommended",
+      "type": "string_t"
+    },
+    "subject": {
+      "requirement": "required"
+    }
+  }
+}

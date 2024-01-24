@@ -1,0 +1,37 @@
+{
+  "attributes": {
+    "integrity": {
+      "sibling": "integrity"
+    },
+    "integrity_id": {
+      "enum": {
+        "-1": {
+          "caption": "Other"
+        }
+      }
+    },
+    "name": {
+      "name": "process_name_t",
+      "type": "string_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "uid": {
+      "caption": "Process UID"
+    },
+    "user": {
+      "caption": "Process user context"
+    }
+  }
+}

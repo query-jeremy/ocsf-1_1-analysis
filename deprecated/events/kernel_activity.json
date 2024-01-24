@@ -1,0 +1,132 @@
+{
+  "attributes": {
+    "activity_id": {
+      "$include": "enums/defaults.json",
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The event activity is not mapped."
+        }
+      }
+    },
+    "attacks": {
+      "caption": "Attacks"
+    },
+    "category_uid": {
+      "default": 0,
+      "enum": {
+        "-1": {
+          "caption": "Other"
+        }
+      }
+    },
+    "class_uid": {
+      "default": 0,
+      "enum": {
+        "-1": {
+          "caption": "Other"
+        }
+      }
+    },
+    "confidence": {
+      "caption": "Confidence",
+      "description": "The confidence of the reported event severity as a percentage: 0%-100%.",
+      "group": "classification",
+      "requirement": "optional",
+      "type": "integer_t"
+    },
+    "count": {
+      "default": 1
+    },
+    "data": {
+      "caption": "Data",
+      "description": "Additional data that is associated with the event.",
+      "requirement": "optional",
+      "type": "json_t"
+    },
+    "disposition_id": {
+      "enum": {
+        "-1": {
+          "caption": "Other"
+        },
+        "1": {
+          "caption": "Blocked"
+        },
+        "10": {
+          "caption": "Delayed",
+          "description": "Requires reboot to finish the operation."
+        },
+        "11": {
+          "caption": "Detected"
+        },
+        "12": {
+          "caption": "Quarantined"
+        },
+        "13": {
+          "caption": "Restored"
+        },
+        "14": {
+          "caption": "Exonerated",
+          "description": "No longer suspicious (re-scored)."
+        },
+        "15": {
+          "caption": "Tagged",
+          "description": "Marked with extended attributes."
+        },
+        "2": {
+          "caption": "Allowed"
+        },
+        "3": {
+          "caption": "No Action"
+        },
+        "4": {
+          "caption": "Logged"
+        },
+        "5": {
+          "caption": "Command Script Run"
+        },
+        "6": {
+          "caption": "Corrected"
+        },
+        "7": {
+          "caption": "Partially Corrected"
+        },
+        "8": {
+          "caption": "Uncorrected"
+        }
+      }
+    },
+    "raw_data": {
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique idenifier for the event",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "severity_id": {
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The event severity is not mapped. See the <code>severity</code> attribute, which contains a data source specific value."
+        },
+        "0": {
+          "description": "The event severity is not known."
+        }
+      }
+    },
+    "status_id": {
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The event status is not mapped. See the <code>status</code> attribute, which contains a data source specific value."
+        }
+      }
+    },
+    "type_uid": {
+      "type": "integer_t"
+    }
+  }
+}

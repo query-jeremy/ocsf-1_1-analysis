@@ -1,0 +1,96 @@
+{
+  "@deprecated": {
+    "message": "Preserved by QDM Curator 2024-01-24",
+    "since": "1.1.0"
+  },
+  "attributes": {
+    "asn": {
+      "caption": "ASN",
+      "description": "The 2- or 4-byte Autonomous System Number (ASN)",
+      "requirement": "optional",
+      "type": "integer_t"
+    },
+    "asn_owner": {
+      "caption": "AS Owner",
+      "description": "The Autonomous System (AS) owner",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "details": {
+      "caption": "Details",
+      "description": "Details about the IP address.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "findings": {
+      "caption": "Findings",
+      "description": "The findings from threat intelligence platforms",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "finding"
+    },
+    "ip": {
+      "caption": "IP Address",
+      "description": "The IP address, in either IPv4 or IPv6 format.",
+      "requirement": "optional",
+      "type": "ip_t"
+    },
+    "labels": {
+      "caption": "Labels",
+      "description": "The labels or tags in the intelligence.",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "location": {
+      "caption": "Detailed Geo Location",
+      "description": "The detailed geographical location usually associated with an IP address.",
+      "requirement": "optional",
+      "type": "location"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "references": {
+      "caption": "Additional references for more information.",
+      "description": "Supporting reference URLs",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "reputations": {
+      "caption": "Reputations",
+      "description": "Reputation score as reported by provider",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "reputation"
+    },
+    "subnet": {
+      "caption": "Subnet",
+      "description": "The subnet mask.",
+      "requirement": "optional",
+      "type": "subnet_t"
+    },
+    "vendor_name": {
+      "caption": "Vendor name",
+      "description": "The vendor that provided the intelligence.",
+      "requirement": "optional",
+      "type": "string_t"
+    }
+  },
+  "caption": "IP Threat Intelligence",
+  "description": "Insights from threat intelligence platforms about IP Addresses",
+  "extends": "_base_threat_intelligence",
+  "extension": "query",
+  "name": "ip_intelligence"
+}

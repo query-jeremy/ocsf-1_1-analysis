@@ -1,0 +1,31 @@
+{
+  "attributes": {
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "raw_score": {
+      "caption": "Reputation Score",
+      "description": "The reputation score as reported by the event source.",
+      "requirement": "required",
+      "type": "float_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "score_id": {
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The reputation score is not mapped. See the <code>rep_score</code> attribute, which contains a data source specific value."
+        }
+      }
+    }
+  }
+}

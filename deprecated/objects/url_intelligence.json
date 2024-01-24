@@ -1,0 +1,357 @@
+{
+  "@deprecated": {
+    "message": "Preserved by QDM Curator 2024-01-24",
+    "since": "1.1.0"
+  },
+  "attributes": {
+    "category_ids": {
+      "caption": "Website Categorization IDs",
+      "description": "The Website categorization identifies.",
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The Domain/URL category is not mapped. See the <code>categories</code> attribute, which may contain a data source specific value."
+        },
+        "0": {
+          "caption": "Unknown",
+          "description": "The Domain/URL category is unknown."
+        },
+        "1": {
+          "caption": "Adult/Mature Content"
+        },
+        "101": {
+          "caption": "Spam"
+        },
+        "102": {
+          "caption": "Potentially Unwanted Software"
+        },
+        "103": {
+          "caption": "Dynamic DNS Host"
+        },
+        "106": {
+          "caption": "E-Card/Invitations"
+        },
+        "107": {
+          "caption": "Informational"
+        },
+        "108": {
+          "caption": "Computer/Information Security"
+        },
+        "109": {
+          "caption": "Internet Connected Devices"
+        },
+        "11": {
+          "caption": "Gambling"
+        },
+        "110": {
+          "caption": "Internet Telephony"
+        },
+        "111": {
+          "caption": "Online Meetings"
+        },
+        "112": {
+          "caption": "Media Sharing"
+        },
+        "113": {
+          "caption": "Radio/Audio Streams"
+        },
+        "114": {
+          "caption": "TV/Video Streams"
+        },
+        "118": {
+          "caption": "Piracy/Copyright Concerns"
+        },
+        "121": {
+          "caption": "Marijuana"
+        },
+        "14": {
+          "caption": "Violence/Hate/Racism"
+        },
+        "15": {
+          "caption": "Weapons"
+        },
+        "16": {
+          "caption": "Abortion"
+        },
+        "17": {
+          "caption": "Hacking"
+        },
+        "18": {
+          "caption": "Phishing"
+        },
+        "20": {
+          "caption": "Entertainment"
+        },
+        "21": {
+          "caption": "Business/Economy"
+        },
+        "22": {
+          "caption": "Alternative Spirituality/Belief"
+        },
+        "23": {
+          "caption": "Alcohol"
+        },
+        "24": {
+          "caption": "Tobacco"
+        },
+        "25": {
+          "caption": "Controlled Substances"
+        },
+        "26": {
+          "caption": "Child Pornography"
+        },
+        "27": {
+          "caption": "Education"
+        },
+        "29": {
+          "caption": "Charitable Organizations"
+        },
+        "3": {
+          "caption": "Pornography"
+        },
+        "30": {
+          "caption": "Art/Culture"
+        },
+        "31": {
+          "caption": "Financial Services"
+        },
+        "32": {
+          "caption": "Brokerage/Trading"
+        },
+        "33": {
+          "caption": "Games"
+        },
+        "34": {
+          "caption": "Government/Legal"
+        },
+        "35": {
+          "caption": "Military"
+        },
+        "36": {
+          "caption": "Political/Social Advocacy"
+        },
+        "37": {
+          "caption": "Health"
+        },
+        "38": {
+          "caption": "Technology/Internet"
+        },
+        "4": {
+          "caption": "Sex Education"
+        },
+        "40": {
+          "caption": "Search Engines/Portals"
+        },
+        "43": {
+          "caption": "Malicious Sources/Malnets"
+        },
+        "44": {
+          "caption": "Malicious Outbound Data/Botnets"
+        },
+        "45": {
+          "caption": "Job Search/Careers"
+        },
+        "46": {
+          "caption": "News/Media"
+        },
+        "47": {
+          "caption": "Personals/Dating"
+        },
+        "49": {
+          "caption": "Reference"
+        },
+        "5": {
+          "caption": "Intimate Apparel/Swimsuit"
+        },
+        "50": {
+          "caption": "Mixed Content/Potentially Adult"
+        },
+        "51": {
+          "caption": "Chat (IM)/SMS"
+        },
+        "52": {
+          "caption": "Email"
+        },
+        "53": {
+          "caption": "Newsgroups/Forums"
+        },
+        "54": {
+          "caption": "Religion"
+        },
+        "55": {
+          "caption": "Social Networking"
+        },
+        "56": {
+          "caption": "File Storage/Sharing"
+        },
+        "57": {
+          "caption": "Remote Access Tools"
+        },
+        "58": {
+          "caption": "Shopping"
+        },
+        "59": {
+          "caption": "Auctions"
+        },
+        "6": {
+          "caption": "Nudity"
+        },
+        "60": {
+          "caption": "Real Estate"
+        },
+        "61": {
+          "caption": "Society/Daily Living"
+        },
+        "63": {
+          "caption": "Personal Sites"
+        },
+        "64": {
+          "caption": "Restaurants/Dining/Food"
+        },
+        "65": {
+          "caption": "Sports/Recreation"
+        },
+        "66": {
+          "caption": "Travel"
+        },
+        "67": {
+          "caption": "Vehicles"
+        },
+        "68": {
+          "caption": "Humor/Jokes"
+        },
+        "7": {
+          "caption": "Extreme"
+        },
+        "71": {
+          "caption": "Software Downloads"
+        },
+        "83": {
+          "caption": "Peer-to-Peer (P2P)"
+        },
+        "84": {
+          "caption": "Audio/Video Clips"
+        },
+        "85": {
+          "caption": "Office/Business Applications"
+        },
+        "86": {
+          "caption": "Proxy Avoidance"
+        },
+        "87": {
+          "caption": "For Kids"
+        },
+        "88": {
+          "caption": "Web Ads/Analytics"
+        },
+        "89": {
+          "caption": "Web Hosting"
+        },
+        "9": {
+          "caption": "Scam/Questionable/Illegal"
+        },
+        "90": {
+          "caption": "Uncategorized"
+        },
+        "92": {
+          "caption": "Suspicious"
+        },
+        "93": {
+          "caption": "Sexual Expression"
+        },
+        "95": {
+          "caption": "Translation"
+        },
+        "96": {
+          "caption": "Non-Viewable/Infrastructure"
+        },
+        "97": {
+          "caption": "Content Servers"
+        },
+        "98": {
+          "caption": "Placeholders"
+        }
+      },
+      "is_array": true,
+      "requirement": "optional",
+      "sibling": "categories",
+      "type": "integer_t"
+    },
+    "details": {
+      "caption": "Details",
+      "description": "Details about the IP address.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "findings": {
+      "caption": "Findings",
+      "description": "The findings from threat intelligence platforms",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "finding"
+    },
+    "first_seen_time": {
+      "caption": "First Seen",
+      "description": "The initial detection time of the activity or object. See specific usage",
+      "requirement": "optional",
+      "type": "timestamp_t"
+    },
+    "labels": {
+      "caption": "Labels",
+      "description": "The labels or tags in the intelligence.",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "last_seen_time": {
+      "caption": "Last Seen",
+      "description": "The most recent detection time of the activity or object. See specific usage.",
+      "requirement": "optional",
+      "type": "timestamp_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "references": {
+      "caption": "Additional references for more information.",
+      "description": "Supporting reference URLs",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "reputations": {
+      "caption": "Reputations",
+      "description": "Reputation score as reported by provider",
+      "is_array": true,
+      "requirement": "optional",
+      "type": "reputation"
+    },
+    "url": {
+      "caption": "URL",
+      "description": "The URL the intelligence applies to.",
+      "requirement": "optional",
+      "type": "url"
+    },
+    "vendor_name": {
+      "caption": "Vendor name",
+      "description": "The vendor that provided the intelligence.",
+      "requirement": "optional",
+      "type": "string_t"
+    }
+  },
+  "caption": "URL Threat Intelligence",
+  "description": "Insights from threat intelligence platforms about URLs",
+  "extends": "_base_threat_intelligence",
+  "extension": "query",
+  "name": "url_intelligence"
+}

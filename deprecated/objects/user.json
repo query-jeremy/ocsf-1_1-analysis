@@ -1,0 +1,109 @@
+{
+  "attributes": {
+    "account_type": {
+      "caption": "Account Type",
+      "description": "The user account type, as defined by the event source.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "account_type_id": {
+      "caption": "Account Type ID",
+      "description": "The normalized user account type identifier.",
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The user account type is not mapped."
+        },
+        "0": {
+          "caption": "Unknown",
+          "description": "The user account type is unknown."
+        },
+        "1": {
+          "caption": "LDAP Account"
+        },
+        "2": {
+          "caption": "Windows Account"
+        },
+        "3": {
+          "caption": "AWS IAM Account"
+        },
+        "4": {
+          "caption": "GCP Account"
+        },
+        "5": {
+          "caption": "Azure AD Account"
+        }
+      },
+      "requirement": "optional",
+      "sibling": "account_type",
+      "type": "integer_t"
+    },
+    "account_uid": {
+      "caption": "Account UID",
+      "description": "The unique identifier of the account(e.g. AWS Account ID).",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "devices": {
+      "description": "The devices related to user.",
+      "requirement": "optional"
+    },
+    "last_login_time": {
+      "requirement": "optional"
+    },
+    "name": {
+      "name": "username_t",
+      "type": "string_t"
+    },
+    "org_uid": {
+      "caption": "Org ID",
+      "description": "The unique identifier of the organization to which the user belongs. For example, Active Directory or AWS Org ID.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "session_uid": {
+      "caption": "Session UID",
+      "description": "The unique ID of the user session, as reported by the OS.<br /><br /><u>Examples:</u> <ul><li><i><b>*nix: </b><i>Aug 10 17:31:16 ip-192-168-1-1 systemd[1]: Started Session 222 of User ubuntu.</li><ul><li><b>session_uid</b> == 222</li></ul><li><b>Windows:</b> Logon ID:       0xd22e9734</li><ul><li><b>session_uid</b> == 0xd22e9734</li></ul></ul>",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "session_uuid": {
+      "caption": "Session UUID",
+      "description": "The universally unique ID of the user session, as reported by the OS. For example, in Windows this is the Login GUID.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "type_id": {
+      "default": 0,
+      "enum": {
+        "-1": {
+          "caption": "Other",
+          "description": "The type is not mapped. See the <code>type</code> attribute, which may contain a data source specific value."
+        }
+      },
+      "name": "integer_t"
+    },
+    "uid": {
+      "caption": "User ID"
+    },
+    "uuid": {
+      "caption": "Unique User ID",
+      "description": "The universally unique identifier of the user. For example, AWS ARN or Windows user GUID.",
+      "requirement": "optional",
+      "type": "string_t"
+    }
+  }
+}

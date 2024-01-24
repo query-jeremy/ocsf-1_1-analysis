@@ -1,0 +1,37 @@
+{
+  "@deprecated": {
+    "message": "Preserved by QDM Curator 2024-01-24",
+    "since": "1.1.0"
+  },
+  "attributes": {
+    "product_uid": {
+      "caption": "Product Identifier",
+      "description": "The unique identifier of the product that reported the finding.",
+      "requirement": "optional",
+      "type": "string_t"
+    },
+    "raw_data": {
+      "caption": "Raw Data",
+      "description": "The event data as received from the event source.",
+      "group": "context",
+      "type": "json_t"
+    },
+    "record_id": {
+      "caption": "Record ID",
+      "description": "Unique identifier for the object",
+      "group": "primary",
+      "requirement": "required",
+      "type": "string_t"
+    },
+    "uid": {
+      "caption": "Unique ID",
+      "description": "The unique identifier of the related finding.",
+      "requirement": "required",
+      "type": "string_t"
+    }
+  },
+  "caption": "Related Findings",
+  "description": "Related Findings object describes findings related to a finding as identified by the security product.",
+  "extends": "object",
+  "name": "related_findings"
+}
